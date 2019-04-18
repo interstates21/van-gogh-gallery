@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300');
+
+:root {
+    --font-header: 'Open Sans', sans-serif;
+    --font-general: 'Open Sans Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: var(--font-general);
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: var(--font-header);
+    padding: 10px;
+}
+
+button {
+    position: absolute;
+    border-radius: 50%;
+    background: none;
+    width: 50px;
+    height: 50px;
+    border: 10px solid yellow;
+    transition: background 600ms ease;
+}
+
+button:hover {
+    background: rgb(235, 252, 0);
+
+}
+
+button:focus {
+    outline: 0;
+}
+
+button#next {
+    top: 85%;
+    right: 5%;
+}
+
+button#prev {
+    top: 85%;
+    left: 5%;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1500ms ease-in-out;
+}
+
+.slide .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.highlight {
+    color: yellow;
+}
+
+.content p {
+    padding: 10px;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide:first-child {
+    background: url('../img/1.jpg') center/cover;
+}
+
+.slide:nth-child(2) {
+    background: url('../img/2.jpg') center/cover;
+}
+.slide:nth-child(3) {
+    background: url('../img/3.jpg') center/cover;
+}
+.slide:nth-child(4) {
+    background: url('../img/4.jpg') center/cover;
+}
+.slide:nth-child(5) {
+    background: url('../img/5.jpg') center/cover;
+}
+.slide:nth-child(6) {
+    background: url('../img/6.jpg') center/cover;
+}
+
+.slide:nth-child(7) {
+    background: url('../img/7.jpg') center/cover;
+}
+
+.slide:nth-child(8) {
+    background: url('../img/8.jpg') center/cover;
+}
+
+.slide:nth-child(9) {
+    background: url('../img/9.jpg') center/cover;
+}
+
+.slide:nth-child(10) {
+    background: url('../img/10.jpg') center/cover;
+}
+
+@media(max-width: 500px) {
+    .content {
+        flex-direction: column;
+    }
+}
